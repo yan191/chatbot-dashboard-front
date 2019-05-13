@@ -1,0 +1,23 @@
+<div fxLayout="column" fxLayoutAlign="center stretch" class="form">
+  <div class="titulo">
+    <h1>Sign up</h1>
+  </div>
+
+  <div class="frase">
+    <h2>Faça o cadastro para poder ter acesso ao dashboard.</h2>
+  </div>
+
+  <mat-form-field>
+    <input matInput type="text" placeholder="Usuário">
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput type="password" placeholder="senha">
+  </mat-form-field>
+
+  <button mat-raised-button class="btnCadastrar" (click)="registrar()">Cadastrar-se</button>
+
+  <label>ou</label>
+
+  <button mat-raised-button class="btnEntrar" routerLink="/login">Entrar</button>
+</div>

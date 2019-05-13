@@ -1,0 +1,10 @@
+<div class="alert" [ngClass]="alert.tipo" *ngIf="status" [@notificacao]>
+  <div fxLayout="row" fxLayout.lt-sm="column">
+    <div fxFlex="80%" class="msg">
+      {{alert.mensagem}}
+    </div>
+    <div fxFlex="17.5%" class="close" (click)="close()">
+      <i class="fas fa-times"></i>
+    </div>
+  </div>
+</div>

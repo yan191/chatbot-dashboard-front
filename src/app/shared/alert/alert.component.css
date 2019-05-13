@@ -1,0 +1,43 @@
+.alert {
+    width:80vw;
+    margin-left:10vw;
+    padding:10px 0;
+    position: absolute;
+    z-index: 998;
+    border-radius:5px;
+    top:25px;
+    background-color:#549F93;
+    color:white;
+    box-shadow: 0 1px 5px 0 rgba(0,0,0, 0.25);
+}
+
+.msg {
+    text-align: center;
+    text-transform: uppercase;
+}
+.close{
+    text-align: right;
+    color:#fff;
+}
+.close:hover{
+    cursor: pointer;
+}
+
+.erro {
+    background-color:#E15554;
+}
+.sucesso {
+    background-color:#3D9970;
+}
+.aviso {
+    background-color:#f57f17;
+}
+.info {
+    background-color:#9e9e9e;
+}
+
+@media only screen and (max-width: 599px){
+    .close{
+        text-align:center;
+    }
+}

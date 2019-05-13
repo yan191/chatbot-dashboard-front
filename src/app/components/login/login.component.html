@@ -1,0 +1,28 @@
+<div fxLayout="column" fxLayoutAlign="center stretch" class="form">
+  <div class="titulo">
+    <h1>Sign in</h1>
+  </div>
+
+  <div class="frase">
+    <h2>Faça o login para ter acesso ao dashboard.</h2>
+  </div>
+  
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="formGroup" fxLayout="column">
+    <mat-form-field>
+      <input matInput type="text" placeholder="Usuário" formControlName="usuario">
+      <mat-error *ngIf="loginForm.get('usuario')?.invalid">{{getUsuarioError()}}</mat-error>
+    </mat-form-field>
+  
+    <mat-form-field>
+      <input matInput type="password" placeholder="senha" formControlName="senha">
+      <mat-error *ngIf="senha?.invalid">teste</mat-error>
+      <mat-error *ngIf="loginForm.get('senha')?.invalid">{{getSenhaError()}}</mat-error>
+    </mat-form-field>
+
+    <button mat-raised-button class="btnEntrar" type="submit" [disabled]="!loginForm.valid">Entrar</button>
+  </form>
+
+  <label>ou</label>
+
+  <button mat-raised-button class="btnCadastrar" routerLink="/cadastro">Cadastrar-se</button>
+</div>

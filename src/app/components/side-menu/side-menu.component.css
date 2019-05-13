@@ -1,0 +1,29 @@
+.side-menu{
+    height:100%;
+    min-height:100vh;
+    background-color:#46494C;
+}
+
+.title {
+    text-transform: uppercase;
+    text-align: center;
+    color:#fff;
+}
+.title h1{
+    margin:0;
+    padding:25px 0;
+    font-weight: normal;
+    font-size: 20px;
+}
+
+.sub-title{
+    text-transform: uppercase;
+    margin:25px 0 10px;
+}
+.sub-title h1{
+    margin:0 40px;
+    font-weight: normal;
+    font-size: 15px;
+    color:#fff;
+    font-weight: lighter;
+}

@@ -1,0 +1,14 @@
+<div fxLayout="row" class="search-bar">
+  <div fxFlex="10%" fxFlexAlign="center" class="search-button" (click)="toggleSearchStatus()">
+      <i class="fas fa-search"></i>
+  </div>
+
+  <mat-form-field fxFlex="75%" class="search" [@search]="searchStatus">
+    <input matInput type="search" placeholder="Pesquisar" [disabled]="searchStatus=='close'">
+  </mat-form-field>
+
+  <div fxFlex="10%" fxLayout="row" class="user">
+    <h1 fxFlex="90%" fxFlexAlign="center">yan rodrigues de azevedo</h1>
+    <i fxFlex="10%"  fxFlexAlign="center"class="fas fa-angle-down"></i>
+  </div>
+</div>

@@ -1,0 +1,56 @@
+.form {
+    width:75%;
+    height:100%;
+    margin:auto;
+}
+.formGroup{
+    width:100%;
+}
+.titulo {
+    text-align: center;
+    color:#549F93;
+}
+.titulo h1{
+    font-size: 30px;
+    font-weight: normal;
+    margin:0;
+}
+
+.frase {
+    text-align: center;
+    margin-top:10px;
+    margin-bottom:20px;
+}
+.frase h2{
+    font-size: 20px;
+    font-weight: lighter;
+    margin:0;
+}
+
+.btnEntrar{
+    background-color: #549F93;
+    color:white;
+    margin-top:10px;
+}
+
+.btnCadastrar{
+    margin-top:10px;
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+label {
+    text-align: center;
+    margin-top:10px;
+}
+
+/* Change label color on focused */
+
+::ng-deep .mat-form-field.mat-focused .mat-form-field-label {
+    color: #549F93 !important;
+}
+
+/* underline border color on focused */
+
+::ng-deep .mat-focused .mat-form-field-underline .mat-form-field-ripple {
+    background-color: #549F93 !important;
+}

@@ -1,0 +1,15 @@
+<div fxLayout="column" class="side-menu">
+  <div class="title">
+    <h1><i class="fas fa-tachometer-alt"></i> dashboard</h1>
+  </div>
+
+  <div class="sub-title">
+    <h1>menu</h1>
+  </div>
+
+  <db-option texto="home" [status]="pagina == 'home'"><i class="fas fa-home"></i></db-option>
+  <db-option texto="filmes" [status]="pagina == 'filmes'"><i class="fas fa-video"></i></db-option>
+  <db-option texto="categorias" [status]="pagina == 'categorias'"><i class="fas fa-filter"></i></db-option>
+  <db-option texto="logout" (click)="logout()"><i class="fas fa-sign-out-alt"></i></db-option>
+
+</div>
