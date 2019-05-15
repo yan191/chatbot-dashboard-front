@@ -3,7 +3,7 @@ import { environment } from '../../../environments/environment'
 import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs/operators';
 import { TokenService } from '../token/token.service';
-import { LoaderService } from 'src/app/service/loader.service';
+import { LoaderService } from 'src/app/service/shared/loader/loader.service';
 
 const api = environment.url;
 

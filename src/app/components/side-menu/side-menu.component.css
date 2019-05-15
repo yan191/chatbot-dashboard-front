@@ -2,6 +2,8 @@
     height:100%;
     min-height:100vh;
     background-color:#46494C;
+    padding-bottom:10px;
+    overflow:auto;
 }
 
 .title {
@@ -11,7 +13,7 @@
 }
 .title h1{
     margin:0;
-    padding:25px 0;
+    padding:25px 25px;
     font-weight: normal;
     font-size: 20px;
 }
@@ -26,4 +28,25 @@
     font-size: 15px;
     color:#fff;
     font-weight: lighter;
+}
+
+.close {
+    text-align:right;
+}
+.close h1{
+    margin:0;
+}
+.close i{
+    color:#fff;
+    font-size: 20px;
+    margin:0 10px 0 0;
+}
+
+@media only screen and (max-width: 960px){
+    .side-menu{
+        box-shadow:0 0 0 100vw rgba(0,0,0,.25) ;
+    }
+    .title h1{
+        padding:0 25px 15px;
+    }
 }

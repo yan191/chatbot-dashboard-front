@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot, Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { TokenService } from '../token/token.service';
-import { AlertService } from 'src/app/service/alert.service';
+import { AlertService } from 'src/app/service/shared/alert/alert.service';
 import { AlertTipo } from 'src/app/model/alert-tipo.enum';
 
 @Injectable({ providedIn: 'root'})

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
-import { AlertService } from 'src/app/service/alert.service';
+import { AlertService } from 'src/app/service/shared/alert/alert.service';
 import { AlertTipo } from 'src/app/model/alert-tipo.enum';
 
 @Component({

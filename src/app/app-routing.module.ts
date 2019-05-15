@@ -7,7 +7,7 @@ const routes: Routes = [
   {
     path: 'dashboard',
     loadChildren: './pages/dashboard/dashboard.module#DashboardModule',
-    canActivate: [AuthGuard]
+    canActivate: [AuthGuard],
   },
   {
     path: '',
@@ -22,6 +22,6 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
 export class AppRoutingModule { }

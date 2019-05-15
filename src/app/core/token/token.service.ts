@@ -26,4 +26,8 @@ export class TokenService {
     isExpired() {
         return jwtHelper.isTokenExpired(this.getToken());
     }
+
+    getTokenDecoded(){
+        return jwtHelper.decodeToken(this.getToken());
+    }
 }

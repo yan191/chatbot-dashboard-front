@@ -1,0 +1,20 @@
+.card {
+   text-align: center;
+   text-transform: uppercase;
+   margin:10px auto;
+}
+.card:hover {
+    cursor: pointer;
+}
+:host /deep/ .card:hover i, .card:hover .title{
+    color:rgb(27, 153, 138);
+}
+
+:host /deep/ i {
+    font-size: 75px;
+    color:rgba(0,0,0,.75);
+}
+
+.title {
+    color:rgba(0,0,0,.75);
+}

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Alert } from 'src/app/model/alert';
 import { AlertTipo } from 'src/app/model/alert-tipo.enum';
-import { AlertService } from 'src/app/service/alert.service';
+import { AlertService } from 'src/app/service/shared/alert/alert.service';
 import { trigger, state, style, animate, transition } from '@angular/animations';
 
 @Component({

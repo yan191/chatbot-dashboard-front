@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { trigger, transition, style, animate, state } from '@angular/animations';
+import { UserService } from 'src/app/core/user/user.service';
+import { User } from 'src/app/model/user';
+import { SideMenuService } from 'src/app/service/components/side-menu/side-menu.service';
 
 @Component({
   selector: 'db-search-bar',
@@ -24,15 +27,23 @@ import { trigger, transition, style, animate, state } from '@angular/animations'
 })
 export class SearchBarComponent implements OnInit {
 
-  searchStatus: string = "close";
+  usuario: User;
 
-  constructor() { }
+  constructor(private userService: UserService,private sideMenuService: SideMenuService) { }
 
   ngOnInit() {
+    this.usuario = this.userService.getLocalUser();
+  }
+  openSideMenu(){
+    this.sideMenuService.open();
   }
 
-  toggleSearchStatus() {
-    this.searchStatus = this.searchStatus=="close" ? "open" : "close";
+  getNomeCompleto(){
+    return this.usuario.nomeCompleto;
+  }
+
+  logout(){
+    this.userService.logout();
   }
 
 }

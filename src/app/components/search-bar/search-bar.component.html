@@ -1,14 +1,21 @@
-<div fxLayout="row" class="search-bar">
-  <div fxFlex="10%" fxFlexAlign="center" class="search-button" (click)="toggleSearchStatus()">
-      <i class="fas fa-search"></i>
+<div fxLayout="row" fxLayoutAlign="end" class="search-bar">
+
+  <div fxHide.lt-md fxLayout="row" class="user">
+
+    <button mat-button [matMenuTriggerFor]="menu">
+      {{ getNomeCompleto() }}
+      <i class="fas fa-chevron-down"></i>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>Account</button>
+      <button mat-menu-item (click)="logout()">Logout</button>
+    </mat-menu>
+
   </div>
 
-  <mat-form-field fxFlex="75%" class="search" [@search]="searchStatus">
-    <input matInput type="search" placeholder="Pesquisar" [disabled]="searchStatus=='close'">
-  </mat-form-field>
+  <div fxHide fxShow.lt-md fxLayout="row" class="bar-options" (click)="openSideMenu()">
 
-  <div fxFlex="10%" fxLayout="row" class="user">
-    <h1 fxFlex="90%" fxFlexAlign="center">yan rodrigues de azevedo</h1>
-    <i fxFlex="10%"  fxFlexAlign="center"class="fas fa-angle-down"></i>
+      <button mat-button><i class="fas fa-bars"></i></button>
+  
   </div>
 </div>

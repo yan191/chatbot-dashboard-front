@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { AlertService } from 'src/app/service/alert.service';
+import { AlertService } from 'src/app/service/shared/alert/alert.service';
 import { AlertTipo } from 'src/app/model/alert-tipo.enum';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { AuthService } from 'src/app/core/auth/auth.service';
-import { LoaderService } from 'src/app/service/loader.service';
+import { LoaderService } from 'src/app/service/shared/loader/loader.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -47,18 +47,12 @@ export class LoginComponent implements OnInit {
     var senha = this.loginForm.get('senha').value;
     this.loader.open();
     this.auth.authenticate(usuario, senha).subscribe(res => {
-      this.route.navigate(['dashboard']);
       this.notificacao.open({ mensagem: 'Login efetuado com sucesso!', tipo: AlertTipo.sucesso });
-      this.loader.close();
+      this.route.navigate(['dashboard']);
     },
       () => {
         this.notificacao.open({ mensagem: 'Não foi possivel efetuar o login!', tipo: AlertTipo.erro });
-        this.loader.close();
       });
-  }
-
-  entrar() {
-    this.notificacao.open({ mensagem: 'Sistema em desenvolvimento', tipo: AlertTipo.aviso });
   }
 
 }

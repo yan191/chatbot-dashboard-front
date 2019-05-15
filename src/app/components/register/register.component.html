@@ -7,17 +7,31 @@
     <h2>Faça o cadastro para poder ter acesso ao dashboard.</h2>
   </div>
 
-  <mat-form-field>
-    <input matInput type="text" placeholder="Usuário">
-  </mat-form-field>
+  <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" class="formGroup" fxLayout="column">
+    <mat-form-field>
+      <input matInput type="text" placeholder="Usuário" formControlName="usuario">
+      <mat-error *ngIf="registerForm.get('usuario')?.invalid">{{getUsuarioError()}}</mat-error>
+    </mat-form-field>
 
-  <mat-form-field>
-    <input matInput type="password" placeholder="senha">
-  </mat-form-field>
+    <mat-form-field>
+      <input matInput type="password" placeholder="senha" formControlName="senha">
+      <mat-error *ngIf="registerForm.get('senha')?.invalid">{{getSenhaError()}}</mat-error>
+    </mat-form-field>
 
-  <button mat-raised-button class="btnCadastrar" (click)="registrar()">Cadastrar-se</button>
+    <mat-form-field>
+      <input matInput type="text" placeholder="nome completo" formControlName="nomeCompleto">
+      <mat-error *ngIf="registerForm.get('nomeCompleto')?.invalid">{{getNomeCompletoError()}}</mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput type="text" placeholder="email" formControlName="email">
+      <mat-error *ngIf="registerForm.get('email')?.invalid">{{getEmailError()}}</mat-error>
+    </mat-form-field>
+
+    <button mat-raised-button class="btnEntrar" type="submit" [disabled]="!registerForm.valid">Cadastrar-se</button>
 
   <label>ou</label>
 
-  <button mat-raised-button class="btnEntrar" routerLink="/login">Entrar</button>
+  <button mat-raised-button class="btnCadastrar" routerLink="/login">Entrar</button>
+  </form>
 </div>

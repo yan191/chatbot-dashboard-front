@@ -4,44 +4,12 @@
     text-align: center;
 }
 
-.search-button{
-    margin:25px 0;
-    text-align: center;
+.user {
+    padding:10px 0;
 }
-.search-button:hover{
-    cursor: pointer;
+.bar-options{
+    padding:10px 0;
 }
-.search-button i{
-    margin:0;
-    font-size: 20px;
-}
-
-.search {
-    overflow:hidden;
-}
-
-.user h1{
-    font-size: 12.5px;
-    font-weight: normal;
-    text-transform: uppercase;
-    text-align: right;
-}
-.user i{
-    padding-left:5px;
-}
-
-.user:hover {
-    cursor: pointer;
-}
-
-/* Change label color on focused */
-
-::ng-deep .mat-form-field.mat-focused .mat-form-field-label {
-    color: #549F93 !important;
-}
-
-/* underline border color on focused */
-
-::ng-deep .mat-focused .mat-form-field-underline .mat-form-field-ripple {
-    background-color: #549F93 !important;
+.bar-options i{
+    font-size: 25px;
 }

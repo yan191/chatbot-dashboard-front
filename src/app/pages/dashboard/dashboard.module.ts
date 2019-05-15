@@ -6,6 +6,8 @@ import { DashboardRoutingModule } from './dashboard.routing.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { SideMenuModule } from 'src/app/components/side-menu/side-menu.module';
 import { SearchBarModule } from 'src/app/components/search-bar/search-bar.module';
+import { HomeModule } from '../home/home.module';
+import { DataBoardModule } from '../data-board/data-board.module';
 
 @NgModule({
   declarations: [DashboardComponent],
@@ -15,7 +17,9 @@ import { SearchBarModule } from 'src/app/components/search-bar/search-bar.module
     DashboardRoutingModule,
     FlexLayoutModule,
     SideMenuModule,
-    SearchBarModule
+    SearchBarModule,
+    HomeModule,
+    DataBoardModule
   ],
   exports: [DashboardComponent]
 })

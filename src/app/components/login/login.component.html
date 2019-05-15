@@ -15,7 +15,6 @@
   
     <mat-form-field>
       <input matInput type="password" placeholder="senha" formControlName="senha">
-      <mat-error *ngIf="senha?.invalid">teste</mat-error>
       <mat-error *ngIf="loginForm.get('senha')?.invalid">{{getSenhaError()}}</mat-error>
     </mat-form-field>
 

@@ -1,4 +1,7 @@
-<div fxLayout="column" class="side-menu">
+<div fxLayout="column" class="side-menu" [fxHide.lt-md]="hide">
+  <div class="close" fxHide fxShow.lt-md (click)="close()">
+    <h1><i class="fas fa-times"></i></h1>
+  </div>
   <div class="title">
     <h1><i class="fas fa-tachometer-alt"></i> dashboard</h1>
   </div>
@@ -8,8 +11,7 @@
   </div>
 
   <db-option texto="home" [status]="pagina == 'home'"><i class="fas fa-home"></i></db-option>
-  <db-option texto="filmes" [status]="pagina == 'filmes'"><i class="fas fa-video"></i></db-option>
-  <db-option texto="categorias" [status]="pagina == 'categorias'"><i class="fas fa-filter"></i></db-option>
+  <db-option texto="data" [status]="pagina == 'data'"><i class="fas fa-chart-bar"></i></db-option>
   <db-option texto="logout" (click)="logout()"><i class="fas fa-sign-out-alt"></i></db-option>
 
 </div>

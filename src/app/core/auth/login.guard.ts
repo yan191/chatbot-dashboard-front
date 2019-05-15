@@ -3,7 +3,7 @@ import { ActivatedRouteSnapshot, RouterStateSnapshot, Router} from '@angular/rou
 import { CanActivate } from '@angular/router';
 import { Observable } from 'rxjs';
 import { TokenService } from '../token/token.service';
-import { AlertService } from 'src/app/service/alert.service';
+import { AlertService } from 'src/app/service/shared/alert/alert.service';
 
 @Injectable({
   providedIn: 'root'
