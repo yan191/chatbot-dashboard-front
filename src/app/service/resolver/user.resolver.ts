@@ -3,7 +3,7 @@ import { Resolve, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/r
 import { UserService } from 'src/app/core/user/user.service';
 import { LoaderService } from '../shared/loader/loader.service';
 import { User } from 'src/app/model/user';
-import { Observable, ReplaySubject } from 'rxjs';
+import { Observable } from 'rxjs';
 
 @Injectable()
 export class UserResolver implements Resolve<Observable<User>> {
